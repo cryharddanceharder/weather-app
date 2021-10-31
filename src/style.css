@@ -84,3 +84,7 @@ button:hover {
   color: rgb(105, 151, 204);
   border: rgb(105, 151, 204) solid;
 }
+
+.code-link {
+  font-weight: 400;
+}
