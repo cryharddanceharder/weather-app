@@ -30,9 +30,11 @@ function showCity(event) {
   let apiKey = "25181b26ceb1bd83a6773b0a70ee242f";
   let search = document.querySelector("#type-location");
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${search.value}&appid=${apiKey}&units=metric`;
-  city.innerHTML = `${search.value}`;
   axios.get(apiUrl).then(currentTemp);
 }
+
+let form = document.querySelector("form");
+form.addEventListener("submit", showCity);
 
 function currentTemp(response) {
   console.log(response.data.main.temp);
